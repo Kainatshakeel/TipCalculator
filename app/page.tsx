@@ -73,22 +73,8 @@ export default function Page() {
 
             <div className="flex flex-col justify-between p-6 bg-very-dark-cyan rounded-xl">
               <div>
-                <Result
-                  label="Tip Amount"
-                  value={
-                    isFinite(calculateTipPerPerson())
-                      ? parseFloat(calculateTipPerPerson().toFixed(2))
-                      : 0
-                  }
-                />
-                <Result
-                  label="Total"
-                  value={
-                    isFinite(calculateTotalPerPerson())
-                      ? parseFloat(calculateTotalPerPerson().toFixed(2))
-                      : 0
-                  }
-                />
+              <Result label="Tip Amount" value={`$${isFinite(calculateTotalPerPerson()) ? calculateTotalPerPerson().toFixed(2) : "0.00"}`} />
+              <Result label="Total" value={`$${isFinite(calculateTotalPerPerson()) ? calculateTotalPerPerson().toFixed(2) : "0.00"}`} />
               </div>
 
               <button

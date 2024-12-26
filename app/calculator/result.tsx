@@ -1,6 +1,6 @@
 interface ResultProps {
   label: string;
-  value: number;
+  value: number | string;
 }
 
 const Result: React.FC<ResultProps> = ({ label, value }) => (
