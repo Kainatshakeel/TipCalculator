@@ -29,7 +29,8 @@ const calculateTipPerPerson = () => calculateTip() / people;
     <div className="bg-light-grayish-cyan items-center justify-items-center sm:p-0 lg:p-8 min-h-screen font-spaceMono">
       <h1 className="text-3xl font-bold text-dark-grayish-cyan pt-8">SPLI</h1>
       <h1 className="text-3xl font-bold text-dark-grayish-cyan pb-8">TTER</h1>
-
+         
+         
       <form>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 bg-white rounded-xl p-8 gap-8">
           <div className="grid grid-cols-1 gap-8">
