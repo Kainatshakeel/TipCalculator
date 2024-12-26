@@ -1,7 +1,16 @@
 
-import Dollar from "./components/svg/Dollar";
 
-const InputField = ({ id, label, onChange, type = "number", placeholder = "0", svg }) => (
+
+interface InputFieldProps {
+  id: string;
+  label: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  type?: string;
+  placeholder?: string;
+  svg?: React.ReactNode;
+}
+
+const InputField: React.FC<InputFieldProps> = ({ id, label, onChange, type = "number", placeholder = "0", svg }) => (
   <div className="grid grid-cols-1 gap-4 min-w-full">
     <label htmlFor={id} className="text-grayish-cyan text-xl font-bold">
       {label}
@@ -13,7 +22,7 @@ const InputField = ({ id, label, onChange, type = "number", placeholder = "0", s
       </span>
       <input
         id={id}
-        className="p-2 pl-10 text-right text-2xl bg-very-light-grayish-cyan rounded-lg text-very-dark-cyan font-extrabold border border-transparent focus:outline-none focus:border-primary"
+        className="p-2 pl-10 min-w-full text-right text-2xl bg-very-light-grayish-cyan rounded-lg text-very-dark-cyan font-extrabold border border-transparent focus:outline-none focus:border-primary"
         type={type}
         onChange={onChange}
         placeholder={placeholder}

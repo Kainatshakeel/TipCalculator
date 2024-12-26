@@ -1,4 +1,9 @@
-const Result = ({ label, value }) => (
+interface ResultProps {
+  label: string;
+  value: number;
+}
+
+const Result: React.FC<ResultProps> = ({ label, value }) => (
     <div className="flex justify-between items-center gap-24 p-4">
       <div>
         <div className="text-white text-xl">{label}</div>

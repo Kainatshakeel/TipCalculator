@@ -1,5 +1,12 @@
 
-const TipButton = ({ text, onClick }) => (
+import React from 'react';
+
+interface TipButtonProps {
+  text: string;
+  onClick: () => void;
+}
+
+const TipButton: React.FC<TipButtonProps> = ({ text, onClick }) => (
     <button
     onClick={onClick}
     type="button"
